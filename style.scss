@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  // font-size: 62.5%;
+  font-family: sans-serif;
+}
+
+body {
+  position: relative;
+  text-align: center;
+  color: #f4f4fb;
+  background-color: #000;
+}
+
+label {
+  font-size: 1.2rem;
+}
+
+main {
+  margin-bottom: 4rem;
+}
+
+.flex-api {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  gap: 2rem;
+  // margin-bottom: 3rem;
+  padding: 0.4rem;
+
+  button {
+    flex: 0 0 auto;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+.modal-content {
+  position: relative;
+  padding: 2rem;
+
+  & .btn-close {
+    position: absolute;
+    top: 0.4rem;
+    right: 0.4rem;
+  }
+
+  & form {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    & label {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.container {
+  min-height: 100vh;
+  max-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 2rem 1rem;
+}
+
+.heading-1 {
+  font-size: 3.6rem;
+}
+
+.header {
+  margin-bottom: 4rem;
+
+  &__description {
+    font-size: 1.8rem;
+  }
+}
+
+.weather {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    &__current {
+      // margin: auto;
+      min-width: 50%;
+      flex: 1 1 auto;
+      border-radius: 0.8rem;
+    }
+
+    &__history {
+      flex: 1 1 auto;
+      border-radius: 0.8rem;
+
+      &__header {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        // gap: 2rem;
+
+        .clear {
+          margin-left: 2rem;
+        }
+      }
+
+      &__container {
+        max-height: 30vh;
+        overflow-y: auto;
+      }
+
+      & p {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__input {
+    width: 10rem;
+  }
+}
+
+.footer {
+  margin-top: auto;
+}
+
+/// SCROLL BAR ///
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 1rem;
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  position: relative;
+  text-align: center;
+  color: #f4f4fb;
+  background-color: #000;
+}
+
+label {
+  font-size: 1.2rem;
+}
+
+main {
+  margin-bottom: 4rem;
+}
+
+.flex-api {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  padding: 0.4rem;
+}
+
+.flex-api button {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
+.flex-api p {
+  margin-bottom: 0;
+}
+
+.modal-content {
+  position: relative;
+  padding: 2rem;
+}
+
+.modal-content .btn-close {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+}
+
+.modal-content form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.modal-content form label {
+  margin-bottom: 0;
+}
+
+.container {
+  min-height: 100vh;
+  max-width: 60rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem 2rem 1rem;
+}
+
+.heading-1 {
+  font-size: 3.6rem;
+}
+
+.header {
+  margin-bottom: 4rem;
+}
+
+.header__description {
+  font-size: 1.8rem;
+}
+
+.weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.8rem;
+}
+
+.weather__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.weather__container__current {
+  min-width: 50%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  border-radius: 0.8rem;
+}
+
+.weather__container__history {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  border-radius: 0.8rem;
+}
+
+.weather__container__history__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.weather__container__history__header .clear {
+  margin-left: 2rem;
+}
+
+.weather__container__history__container {
+  max-height: 30vh;
+  overflow-y: auto;
+}
+
+.weather__container__history p {
+  margin-bottom: 0;
+}
+
+.weather__input {
+  width: 10rem;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 1rem;
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/*# sourceMappingURL=style.css.map */
