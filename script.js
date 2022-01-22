@@ -1,21 +1,3 @@
-// const html = `
-//           <div class="flex-api text-primary">
-//           <p>To use this App You have to enter your openweathermap API Key</p>
-//           <button
-//             type="button"
-//             class="btn btn-outline-primary"
-//             data-bs-toggle="modal"
-//             data-bs-target="#staticBackdrop"
-//           >
-//             Add your API Key
-//           </button>
-//         </div>
-//         `;
-
-// document
-//   .querySelector(".weather__container__current")
-//   .insertAdjacentHTML("afterbegin", html);
-
 class Weather {
   container = document.querySelector(".weather__container__current");
   getWeatherBtn = document.querySelector(".action");
@@ -38,15 +20,13 @@ class Weather {
       e.preventDefault();
       this.API = document.getElementById("api").value;
 
-      // document.querySelector(".flex-api").setAttribute("hidden", "hidden");
-
       [...document.querySelectorAll(".flex-api")].map((el) =>
         el.setAttribute("hidden", "hidden")
       );
     });
   }
 
-  errorAPI() {
+  invalidAPIKeyError() {
     const html = `
           <div class="flex-api text-danger border border-danger rounded-3 ">
           <p>Your API Key is not valid, please enter a valid API Key (only openweathermap API Key)</p>
@@ -62,7 +42,6 @@ class Weather {
         `;
 
     return html;
-    // this.container.insertAdjacentHTML("afterbegin", html);
   }
 
   async getWeatherData(city) {
@@ -72,10 +51,7 @@ class Weather {
       `);
       const responseData = await response.json();
       if (response.status === 401) {
-        throw new Error(this.errorAPI());
-        // throw new Error(
-        //   "Your API Key is not valid, please enter a valid API Key (only openweathermap API Key)"
-        // );
+        throw new Error(this.invalidAPIKeyError());
       }
       if (!response.ok)
         throw new Error(
