@@ -30,7 +30,7 @@ main {
   align-content: center;
   align-items: center;
   gap: 2rem;
-  // margin-bottom: 3rem;
+  margin-bottom: 3rem;
   padding: 0.4rem;
 
   button {
@@ -41,6 +41,7 @@ main {
     margin-bottom: 0;
   }
 }
+
 .modal-content {
   position: relative;
   padding: 2rem;
@@ -53,11 +54,15 @@ main {
 
   & form {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-content: center;
     align-items: center;
     gap: 1rem;
 
+    & input {
+      max-width: 30rem;
+    }
     & label {
       margin-bottom: 0;
     }
@@ -97,7 +102,6 @@ main {
     gap: 2rem;
 
     &__current {
-      // margin: auto;
       min-width: 50%;
       flex: 1 1 auto;
       border-radius: 0.8rem;
